@@ -1,0 +1,426 @@
+﻿
+body{
+    margin: 0px;
+    overflow-y: scroll;
+    font-family: 'Lucida Grande';}
+a{
+    text-decoration: none;
+    padding: 7px 10px;
+    color:inherit;
+}
+.box_container{
+    width:100%;
+    height:100px;
+    background-color: white;
+    z-index: 998;
+    position: fixed;
+}
+/*图标*/
+.box2{
+    width: 300px;
+    height: 100px;
+    position: fixed;
+    left: 310px;
+    z-index: 999;
+    margin-left: 50px;
+    text-align: bottom;
+    display: flex;
+}
+/*顶部菜单*/
+.box3{
+    width: 900px;
+    height: 100px;
+    z-index: 999;
+    background-color: white;
+    position: fixed;
+    right: 310px;
+    overflow: overlay;
+}
+/*标签1，用于顶部菜单的列表内子项*/
+.f1{}
+.float{
+    background-color: #8DC63F;
+    background-size: cover;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.active {
+    background-color: #8DC63F;
+    background-size: cover;
+    cursor: pointer;
+}
+/*顶部菜单选项*/
+.table1{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    font-size: 20px;
+}
+/*正文*/
+.box4{
+    display: none;
+    width: 1300px;
+    top: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+}
+/*home*/
+.home{
+    height: 550px;
+    overflow:hidden;
+    background-image: url("Research.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*People*/
+.people_table{
+    width: 100%;
+}
+.people_container{
+    width: 1300px;
+    height: 300px;
+    margin-bottom: 50px;
+    display: flex;
+    overflow:hidden;
+}
+.people_pic_container{
+    width: 200px;
+    height: 100%;
+    margin-right:50px;
+}
+.people_pic{
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    border:1px solid black;
+}
+.people_text_container{
+    width: 1050px;
+    height: 100%;
+    text-align:left;
+}
+.people_name{
+    height: 20px;
+    font-size:24px;
+    margin-top: 0px;
+    font-weight: bold;
+}
+.people_title{
+    font-size:16px;
+    height: 15px;
+}
+.people_description{
+    height: 170px;
+}
+/*疑似无效*/
+.people_link{
+    height: 15px;
+}
+.people_past{
+    height: 50px;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: left;
+}
+
+/*Publication*/
+.pub_container{
+    width: 1300px;
+    height: 400px;
+    position: relative;
+    margin-bottom:30px; 
+    border-bottom: 2px solid #EAEAEA;
+    padding-bottom: 20px;
+    display: flex;
+    overflow:hidden;
+}
+.pub_flag{
+    height: 50px;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+.pub_year{
+    height: 50px;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: left;
+}
+.pub_link{
+    height:100%; 
+    width:100%;
+    alt: "failed";
+}
+.pub_pic{
+    width: 400px;
+    height: 100%;
+    margin-right: 100px;
+}
+.pub_text_container{
+    width: 800px;
+    height: 100%;
+}
+.pub_title{
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.pub_author_list{
+    height: 50px;
+    margin: 10px;
+    text-align: left;
+    font-size: 15px;
+    color: gray;
+}
+.pub_description{
+    height: 200px;
+    margin: 10px;
+    text-align: left;
+    font-size: 20px;
+}
+.pub_journal{
+    height: 25px;
+    margin: 10px;
+    text-align: left;
+    font-size: 20px;
+    color: #607ae3;
+}
+
+/*Gallery*/
+.gallery{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.gallery_container_horizontal{
+    width: 400px;
+    height: 300px;
+    margin: 20px;
+    position: relative;
+    overflow:hidden;
+    border-radius: 25%;
+    border:1px solid black;
+    background-color: black;
+}
+.gallery_container_vertical{
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    position: relative;
+    overflow:hidden;
+    border-radius: 5%;
+    border:1px solid black;
+    background-color: black;
+}
+.gallery_sliderpic{
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: 0.4} 
+    to {opacity: 1}
+}
+
+
+/*Blogs*/
+.blogs{
+    width: 100%;
+}
+.blogs_container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100px;
+    margin-left: 200px;
+    margin-bottom: 10px;
+    
+}
+.blogs_cal{
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    border-right: 2px solid #8DC63F;
+    background-color: #f2f0f0
+}
+.blogs_cal_font1{
+    font-size: 24px;
+    color: #8DC63F;
+    margin: 0px;
+    margin-top: 10px;
+}
+.blogs_cal_font2{
+    font-size: 22px;
+    color: #8DC63F;
+    margin: 0px;
+}
+.blogs_text_container{
+    width: 850px;
+    height: 100px;
+    background-color: #f2f0f0;
+    border-bottom: 2px solid #EAEAEA;
+}
+.blogs_title{
+    height: 20px;
+    width: 100%;
+    font-weight: bold;
+    text-align: left;
+    font-size: 20px;
+    margin: 10px;
+}
+.blogs_preview{
+    width: 100%;
+    height: 80px;
+    text-align: left;
+}
+
+/*时间线*/
+* {
+    box-sizing: border-box;
+}
+
+.news {
+    background-color: #acadb1;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #8DC63F;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 31px;
+    }
+            
+    /* Full-width containers */
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+            
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+        left: 15px;
+    }
+            
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
+}
