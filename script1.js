@@ -1,4 +1,9 @@
 // JavaScript source code
+
+/*manual input*/
+//登记Gallery需要的信息，依次为文件夹名字，图片数量，图片格式，图片是横/竖版
+let galleryList = ["WF 11 jpg vertical", "JJ 6 jpeg horizontal", "C2D 2 png vertical", "NAR1 12 png vertical"];
+
 /*翻页功能*/
 function openTab(event, tabName) {
     // 获取所有标签页内容元素
@@ -18,7 +23,6 @@ function openTab(event, tabName) {
     // 显示当前选中标签页内容，如果是gallery则显示第一张图片
     document.getElementById(tabName).style.display = "block";
     if(tabName == "tab5"){
-        getTarget();//
         let i;
         let pic_set = document.getElementsByClassName("pic_set");
         for(i = 0; i < pic_set.length; i++){
@@ -56,6 +60,7 @@ function galleryshow(setName, i){
     if(i == picset.length){
         i = 0;
     }
+    console.log(i);
     timer = setTimeout(picgonext, 1000, picset, i);
 }
 function picgonext(picset, i){
@@ -80,11 +85,32 @@ function galleryhidden(setName){
 
 //网页加载时，遍历指定文件夹，为其中每个对象创建一个块级元素
 function elementCreator(){
-
-}
-
-function getTarget(){
-    var FF = new Folder(".\Gallery\JJ");
-    var files = FF.getFiles();
-    console.log(files);
+    let setList = []; 
+    let galleryContainer = document.getElementsByClassName("gallery")[0];
+    for(let i=0; i<galleryList.length; i++){
+        var splitList = galleryList[i].split(' ');
+        var dir = splitList[0];
+        var count = splitList[1];
+        var suf = splitList[2];
+        var align = splitList[3];
+        let divElement = document.createElement('div');
+        divElement.id = "set" + i.toString();
+        divElement.className = "gallery_container_" + align + " pic_set";
+        divElement.onmouseleave = function(){
+            galleryhidden.call(this, divElement.id);
+        };
+        //console.log(divElement.className);
+        galleryContainer.appendChild(divElement);
+        setList.push(divElement);
+        for(let j=0; j<count; j++){
+            let imgElement = document.createElement('img');
+            imgElement.src ='Gallery/' + dir + '/' + (j+1).toString() + '.' + suf;
+            imgElement.className = "gallery_sliderpic fade";
+            imgElement.onmouseover = function(){
+                galleryshow.call(this, setList[i].id, j+1);
+            };
+            //console.log(imgElement.onmouseover);
+            setList[i].appendChild(imgElement);
+        }
+    }
 }
