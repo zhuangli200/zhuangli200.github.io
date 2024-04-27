@@ -10,6 +10,7 @@
 
 
 <body onload = "elementCreator()">
+    
     <div class="box_container">
         <div class="box2"><h1 style="font-size: 40px; color:gray">Zhuang</h1><h1 style="font-size: 40px; color: #8DC63F;">Lab</h1></div>
         <div class="box3">
@@ -25,7 +26,7 @@
             </table>
         </div> 
     </div>
-
+    
     <!-- 正文 -->
     <!-- Home -->
     <div id="tab1" class="box4 fade" style="display: block;">
@@ -170,7 +171,7 @@
                 <p class="pub_title">Molecular mechanism for target RNA recognition and cleavage of Cas13h</p>
                 <p class="pub_author_list">Fugen Chen*, Chendi Zhang*, Jialin Xue, Feng Wang and Zhuang Li#</p>
                 <p class="pub_description">This work provides the working mechanism of Cas13h1, a novel Cas13 subtype.</p>
-                <p class="pub_journal"><a href="https://www.sciencedirect.com/science/article/abs/pii/S1097276524000054?via%3Dihub">Nucleic Acids Research 2024</a></p>
+                <p class="pub_journal"><a class="text_link" href="https://www.sciencedirect.com/science/article/abs/pii/S1097276524000054?via%3Dihub">Nucleic Acids Research 2024</a></p>
                 </div>
             </div> 
 
@@ -180,7 +181,7 @@
                 <p class="pub_title">Molecular mechanism for target recognition, dimerization, and activation of Pyrococcus furiosus Argonaute</p>
                 <p class="pub_author_list">Longyu Wang*, Wanping Chen*, Chendi Zhang*, Xiaochen Xie, Fuyong Huang, Miaomiao Chen, Wuxiang Mao, Na Yu, Qiang Wei, Lixin Ma#, and Zhuang Li#</p>
                 <p class="pub_description">This work provides the <b>first</b>evidence that dimerization plays important role in cleavage activity of Argonaute.</p>
-                <p class="pub_journal"><a href="https://www.sciencedirect.com/science/article/abs/pii/S1097276524000054?via%3Dihub">Molecular Cell 2024</a></p>
+                <p class="pub_journal"><a class="text_link" href="https://www.sciencedirect.com/science/article/abs/pii/S1097276524000054?via%3Dihub">Molecular Cell 2024</a></p>
                 </div>
             </div>
 
@@ -191,7 +192,7 @@
                     <p class="pub_title">Structural Basis for the Ribonuclease Activity of a Thermostable CRISPR-Cas13a from Thermoclostridium caenicola.</p>
                     <p class="pub_author_list">Feng Wang*, Chendi Zhang*, Haijiang Xu, Wanting Zeng, Lixin Ma, Zhuang Li#</p>
                     <p class="pub_description">This work is about a thermostable Cas13a which lacks pre-crRNA processing activity. Please check the blogs for author digestion</p>
-                    <p class="pub_journal"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0022283623002966">Journal of Molecular Biology 2023</a></p>
+                    <p class="pub_journal"><a class="text_link" href="https://www.sciencedirect.com/science/article/abs/pii/S0022283623002966">Journal of Molecular Biology 2023</a></p>
                 </div>
             </div>
 
@@ -253,11 +254,12 @@
         <div class="gallery"></div>
     </div>
     <!--Blogs -->
+    <div class="test" style="top:200px" onclick="elementHidden('C1')">hidden</div>
+    <div class="test" style="top:300px" onclick="elementShow('C1')">show</div>
     <div id="tab6" class="box4 fade">
         <div class="blogs">
-
-
-            <div class="blogs_container">
+        <!--C1科研进展，C2技术分享，C3经典文章-->
+            <div class="blogs_container C1">
                 <div class="blogs_cal">
                     <div class="blogs_cal_year"><p class="blogs_cal_font1">2024</p></div>
                     <div><p class="blogs_cal_font2">Jan 31</p></div>
@@ -266,75 +268,71 @@
                     <p class="blogs_title"><a href="Blogs/NAR1.html" target="_blank">【科研进展】Nucleic Acids Research | Cas13的工作机理研究</a></p>
                     <p class="blogs_preview"><a href="Blogs/NAR1.html" target="_blank">From Our Lab</a></p>
                 </div>
-            </div> 
-
-
-
-
+            </div>
 
             <div class="blogs_container">
                 <div class="blogs_cal">
-                    <div class="blogs_cal_year"><p class="blogs_cal_font1">2024</p></div>
-                    <div><p class="blogs_cal_font2">Jan 31</p></div>
+                    <div class="blogs_cal_year"><p class="blogs_cal_font2">Jan 31</p></div>
+                    <div><p class="blogs_cal_font1">2024</p></div>
                 </div>
                 <div class="blogs_text_container">
-                    <p class="blogs_title"><a href="https://mp.weixin.qq.com/s/aFnzBq89u3cygrAT15nzcg" target="_blank">【科研进展】Molecular Cell | 二聚化在长原核Argonaute功能中的重要作用</a></p>
-                    <p class="blogs_preview"><a href="https://mp.weixin.qq.com/s/aFnzBq89u3cygrAT15nzcg" target="_blank">转载自微信公众号BioART</a></p>
+                    <p class="blogs_title"><a class="text_link" href="https://mp.weixin.qq.com/s/aFnzBq89u3cygrAT15nzcg" target="_blank">【科研进展】Molecular Cell | 二聚化在长原核Argonaute功能中的重要作用</a></p>
+                    <p class="blogs_preview"><a class="text_link" href="https://mp.weixin.qq.com/s/aFnzBq89u3cygrAT15nzcg" target="_blank">转载自微信公众号BioART</a></p>
                 </div>
             </div> 
 
             <div class="blogs_container">
                 <div class="blogs_cal">
-                    <div class="blogs_cal_year"><p class="blogs_cal_font1">2024</p></div>
-                    <div><p class="blogs_cal_font2">Feb 06</p></div>
+                    <div class="blogs_cal_year"><p class="blogs_cal_font2">Feb 06</p></div>
+                    <div><p class="blogs_cal_font1">2024</p></div>
                 </div>
                 <div class="blogs_text_container">
-                    <p class="blogs_title"><a href="https://mp.weixin.qq.com/s/YFaU2CW7SahrEG2UutTYpQ" target="_blank">【科研进展】【转载】Molecular Cell | 狂热的火球——探秘古菌世界的基因剪辑高手</a></p>
-                    <p class="blogs_preview"><a href="https://mp.weixin.qq.com/s/YFaU2CW7SahrEG2UutTYpQ" target="_blank">转载自胡纯一实验室 Hu lab公众号</a></p>
+                    <p class="blogs_title"><a class="text_link" href="https://mp.weixin.qq.com/s/YFaU2CW7SahrEG2UutTYpQ" target="_blank">【科研进展】【转载】Molecular Cell | 狂热的火球——探秘古菌世界的基因剪辑高手</a></p>
+                    <p class="blogs_preview"><a class="text_link" href="https://mp.weixin.qq.com/s/YFaU2CW7SahrEG2UutTYpQ" target="_blank">转载自胡纯一实验室 Hu lab公众号</a></p>
                 </div>
             </div> 
 
             <div class="blogs_container">
                 <div class="blogs_cal">
-                    <div class="blogs_cal_year"><p class="blogs_cal_font1">2023</p></div>
-                    <div><p class="blogs_cal_font2">Jul 01</p></div></div>
-                <div class="blogs_text_container">
-                    <p class="blogs_title"><a href="https://mp.weixin.qq.com/s/bYcS4CteOE6QoK7Xp5uA4w" target="_blank">【科研进展】【转载】Cell Research | Ago蛋白相关NADase在细菌免疫中的激活机制</a></p>
-                    <p class="blogs_preview"><a href="https://mp.weixin.qq.com/s/bYcS4CteOE6QoK7Xp5uA4w" target="_blank">转载自微信公众号BioART</a></p>
-                </div>
-            </div> 
-
-
-            <div class="blogs_container">
-                <div class="blogs_cal">
-                    <div class="blogs_cal_year"><p class="blogs_cal_font1">????</p></div>
-                    <div><p class="blogs_cal_font2">????</p></div>
+                    <div class="blogs_cal_year"><p class="blogs_cal_font2">Jul 01</p></div>
+                    <div><p class="blogs_cal_font1">2023</p></div>
                 </div>
                 <div class="blogs_text_container">
-                    <p class="blogs_title"><a href="Blogs/tccCas13a.html" target="_blank">【科研进展】JMB | 嗜热菌来源的Cas13a的工作机理研究</a></p>
-                    <p class="blogs_preview"><a href="Blogs/tccCas13a.html" target="_blank"></a></p>
+                    <p class="blogs_title"><a class="text_link" href="https://mp.weixin.qq.com/s/bYcS4CteOE6QoK7Xp5uA4w" target="_blank">【科研进展】【转载】Cell Research | Ago蛋白相关NADase在细菌免疫中的激活机制</a></p>
+                    <p class="blogs_preview"><a class="text_link" href="https://mp.weixin.qq.com/s/bYcS4CteOE6QoK7Xp5uA4w" target="_blank">转载自微信公众号BioART</a></p>
                 </div>
             </div> 
 
             <div class="blogs_container">
                 <div class="blogs_cal">
-                    <div class="blogs_cal_year"><p class="blogs_cal_font1">2021</p></div>
-                    <div><p class="blogs_cal_font2">Jan 26</p></div>
+                    <div class="blogs_cal_year"><p class="blogs_cal_font2">????</p></div>
+                    <div><p class="blogs_cal_font1">????</p></div>
                 </div>
                 <div class="blogs_text_container">
-                    <p class="blogs_title"><a href="https://mp.weixin.qq.com/s/xK8dAqM8bBuijt1dA_c1Rg" target="_blank">【科研进展】【转载】NCB | CRISPR-Cas12g系统的激活机理</a></p>
-                    <p class="blogs_preview"><a href="https://mp.weixin.qq.com/s/xK8dAqM8bBuijt1dA_c1Rg" target="_blank">转载自微信公众号BioART</a></p>
+                    <p class="blogs_title"><a class="text_link" href="Blogs/tccCas13a.html" target="_blank">【科研进展】JMB | 嗜热菌来源的Cas13a的工作机理研究</a></p>
+                    <p class="blogs_preview"><a class="text_link" href="Blogs/tccCas13a.html" target="_blank"></a></p>
                 </div>
             </div> 
 
             <div class="blogs_container">
                 <div class="blogs_cal">
-                    <div class="blogs_cal_year"><p class="blogs_cal_font1">????</p></div>
-                    <div><p class="blogs_cal_font2">????</p></div>
+                    <div class="blogs_cal_year"><p class="blogs_cal_font2">Jan 26</p></div>
+                    <div><p class="blogs_cal_font1">2021</p></div>
                 </div>
                 <div class="blogs_text_container">
-                    <p class="blogs_title"><a href="https://mp.weixin.qq.com/s/wAXBmIadeSdzMifRzvyo4Q" target="_blank">【经典分享】【转载】特别致敬CRISPR幕后的英雄们——最全的一份CRISPR英雄谱</a></p>
-                    <p class="blogs_preview"><a href="https://mp.weixin.qq.com/s/wAXBmIadeSdzMifRzvyo4Q" target="_blank">转载自微信公众号BioART</a></p>
+                    <p class="blogs_title"><a class="text_link" href="https://mp.weixin.qq.com/s/xK8dAqM8bBuijt1dA_c1Rg" target="_blank">【科研进展】【转载】NCB | CRISPR-Cas12g系统的激活机理</a></p>
+                    <p class="blogs_preview"><a class="text_link" href="https://mp.weixin.qq.com/s/xK8dAqM8bBuijt1dA_c1Rg" target="_blank">转载自微信公众号BioART</a></p>
+                </div>
+            </div> 
+
+            <div class="blogs_container">
+                <div class="blogs_cal">
+                    <div class="blogs_cal_year"><p class="blogs_cal_font2">????</p></div>
+                    <div><p class="blogs_cal_font1">????</p></div>
+                </div>
+                <div class="blogs_text_container">
+                    <p class="blogs_title"><a class="text_link" href="https://mp.weixin.qq.com/s/wAXBmIadeSdzMifRzvyo4Q" target="_blank">【经典分享】【转载】特别致敬CRISPR幕后的英雄们——最全的一份CRISPR英雄谱</a></p>
+                    <p class="blogs_preview"><a class="text_link" href="https://mp.weixin.qq.com/s/wAXBmIadeSdzMifRzvyo4Q" target="_blank">转载自微信公众号BioART</a></p>
                 </div>
             </div> 
 

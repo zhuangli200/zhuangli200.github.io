@@ -114,3 +114,13 @@ function elementCreator(){
         }
     }
 }
+
+function elementHidden(name){
+    let target = document.getElementsByClassName(name)[0];
+    target.style.display = "none";
+}
+
+function elementShow(name){
+    let target = document.getElementsByClassName(name)[0];
+    target.style.display = "flex";
+}
