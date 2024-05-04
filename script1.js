@@ -1,8 +1,11 @@
 // JavaScript source code
-
 /*manual input*/
 //登记Gallery需要的信息，依次为文件夹名字，图片数量，图片格式，图片是横/竖版
-let galleryList = ["WF 11 jpg vertical", "JJ 6 jpeg horizontal", "C2D 2 png vertical", "NAR1 12 png vertical"];
+let galleryCollection = ["WF 11 jpg", "JJ 6 jpeg", "C2D 2 png", "NAR1 12 png", "Party1 16 jpeg"];
+
+function init(){
+    imgCreator();
+}
 
 /*翻页功能*/
 function openTab(event, tabName) {
@@ -23,8 +26,10 @@ function openTab(event, tabName) {
     // 显示当前选中标签页内容，如果是gallery则显示第一张图片
     document.getElementById(tabName).style.display = "block";
     if(tabName == "tab5"){
+        galleryAlign();
         let i;
         let pic_set = document.getElementsByClassName("pic_set");
+        let tmp = document.getElementsByClassName("gallery_list");
         for(i = 0; i < pic_set.length; i++){
             pic_set[i].children[0].style.display = "block";
         }
@@ -34,19 +39,8 @@ function openTab(event, tabName) {
     for (var i = 0; i < tabs.length; i++) {
         tabs[i].className = tabs[i].className.replace(" active", "");
     }
-    //移除指向时亮起的float标签
-    event.currentTarget.className -= " float";
     // 添加 active 类到当前选中标签页选项卡
     event.currentTarget.className += " active";
-}
-/*菜单栏高亮特效*/
-//鼠标指向选项时
-function slideon(event){       
-    if(!event.currentTarget.classList.contains("active")){event.currentTarget.className += " float";}
-}
-//鼠标移开时
-function slideout(event){
-    if(!event.currentTarget.classList.contains("active")){event.currentTarget.className -= "float";}
 }
 
 /*gallery(tab5)展示特效
@@ -60,7 +54,6 @@ function galleryshow(setName, i){
     if(i == picset.length){
         i = 0;
     }
-    console.log(i);
     timer = setTimeout(picgonext, 1000, picset, i);
 }
 function picgonext(picset, i){
@@ -83,44 +76,84 @@ function galleryhidden(setName){
     }
 }
 
-//网页加载时，遍历指定文件夹，为其中每个对象创建一个块级元素
+//网页加载时，遍历指定文件夹，为其中每个对象创建一个块级元素，imgCreator
+//页面切换到gallery时，align整个页面，galleryAlign
 function elementCreator(){
-    let setList = []; 
-    let galleryContainer = document.getElementsByClassName("gallery")[0];
-    for(let i=0; i<galleryList.length; i++){
-        var splitList = galleryList[i].split(' ');
+    //let galleryList = document.getElementsByClassName("gallery_list");
+
+    //galleryList[i].appendChild(divElement);//!!!!!!!!//
+}
+
+let galleryTmpList = [];
+function imgCreator(){
+    //根据文件夹生成容器
+    for(var i=0; i<galleryCollection.length; i++){
+        var splitList = galleryCollection[i].split(' ');
         var dir = splitList[0];
         var count = splitList[1];
         var suf = splitList[2];
-        var align = splitList[3];
         let divElement = document.createElement('div');
         divElement.id = "set" + i.toString();
-        divElement.className = "gallery_container_" + align + " pic_set";
+        divElement.className = "gallery_container" + " pic_set";
+        divElement.style.position = "relative";
         divElement.onmouseleave = function(){
             galleryhidden.call(this, divElement.id);
         };
-        //console.log(divElement.className);
-        galleryContainer.appendChild(divElement);
-        setList.push(divElement);
+        //生成单张图片
         for(let j=0; j<count; j++){
             let imgElement = document.createElement('img');
             imgElement.src ='Gallery/' + dir + '/' + (j+1).toString() + '.' + suf;
             imgElement.className = "gallery_sliderpic fade";
             imgElement.onmouseover = function(){
-                galleryshow.call(this, setList[i].id, j+1);
+                galleryshow.call(this, divElement.id, j+1);
             };
-            //console.log(imgElement.onmouseover);
-            setList[i].appendChild(imgElement);
+            divElement.appendChild(imgElement);
         }
+        galleryTmpList.push(divElement);
     }
 }
 
-function elementHidden(name){
-    let target = document.getElementsByClassName(name)[0];
-    target.style.display = "none";
+function galleryAlign(){
+    let galleryList = document.getElementsByClassName("gallery_list");
+    for(var i=0; i<galleryTmpList.length; i++){
+        galleryList[i%3].appendChild(galleryTmpList[i]);
+    }
 }
 
-function elementShow(name){
-    let target = document.getElementsByClassName(name)[0];
-    target.style.display = "flex";
+function getElementBottom(parent, sub) {
+    const parentClient = parent.getBoundingClientRect();
+    const subClient = sub.getBoundingClientRect();
+    return parseInt(subClient.bottom - parentClient.bottom);
+}
+
+function selector(name, event){
+    let blogs = document.getElementsByClassName("blogs_container");
+    for(var i=0;i<blogs.length;i++){
+        blogs[i].style.display = "none";
+    }
+    let c1 = document.getElementsByClassName(name);
+    for(var i=0;i<c1.length;i++){
+        c1[i].style.display = "flex";
+    }
+    if(!event.currentTarget.classList.contains("active")){
+        let blogSelector = document.getElementsByClassName("blogs_buttom");
+        for(var i=0;i<blogSelector.length;i++){
+            blogSelector[i].className = blogSelector[i].className.replace(" active", "");
+        }
+        event.currentTarget.className += " active";
+    }
+}
+
+function allShow(event){
+    let blogs = document.getElementsByClassName("blogs_container");
+    for(var i=0;i<blogs.length;i++){
+        blogs[i].style.display = "flex";
+    }
+    if(!event.currentTarget.classList.contains("active")){
+        let blogSelector = document.getElementsByClassName("blogs_buttom");
+        for(var i=0;i<blogSelector.length;i++){
+            blogSelector[i].className = blogSelector[i].className.replace(" active", "");
+        }
+        event.currentTarget.className += " active";
+    }
 }

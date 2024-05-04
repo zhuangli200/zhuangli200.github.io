@@ -20,39 +20,43 @@ a{
     padding: 0px;
 }
 .box_container{
-    width:100%;
-    height:100px;
+    width:62.5%;
+    height:5vw;
+    margin-left: 18.75%;
+    margin-right: 18.75%;
+    top: 0vw;
     background-color: white;
     z-index: 998;
     position: fixed;
+    display: flex;
 }
 /*图标*/
 .box2{
-    width: 300px;
-    height: 100px;
-    position: fixed;
-    left: 350px;
+    width: 33.3%;
+    height: 5vw;
     z-index: 999;
     text-align: bottom;
     display: flex;
+    padding-left: 5vw;
 }
 /*顶部菜单*/
 .box3{
-    width: 900px;
-    height: 100px;
+    width: 66.6%;
+    height: 5vw;
     z-index: 999;
     background-color: white;
-    position: fixed;
-    right: 350px;
     overflow: overlay;
+    margin-left: auto;
+    padding-right: 5vw;
+}
+.box3_text{
+    font-size: 1vw;
 }
 /*标签1，用于顶部菜单的列表内子项*/
 .f1{}
-.float{
-    background-color: #8DC63F;
-    background-size: cover;
+.f1:hover{
+    background-color: #98fc03;
     cursor: pointer;
-    opacity: 0.5;
 }
 .active {
     background-color: #8DC63F;
@@ -70,36 +74,38 @@ a{
 /*正文*/
 .box4{
     display: none;
-    width: 1200px;
-    top: 110px;
-    margin: 0 auto;
+    width: 62.5%;
+    top: 5vw;
+    margin-left: 18.75%;
+    margin-right: 18.75%;
     position: relative;
     text-align: center;
-    
+    padding-top: 1vw;
 }
 /*home*/
 .home{
-    height: 550px;
+    width: 100%;
+    height: 30vw;
     overflow:hidden;
     background-image: url("Research.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
-/*People*/
-.people_table{
-    width: 100%;
+.home_text{
+    font-size: 1vw;
 }
+/*People*/
 .people_container{
-    width: 1300px;
-    height: 300px;
-    margin-bottom: 50px;
+    width: 100%;
+    height: 15vw;
+    margin-bottom: 2vw;
     display: flex;
     overflow:hidden;
 }
 .people_pic_container{
-    width: 200px;
+    width: 17%;
     height: 100%;
-    margin-right:50px;
+    margin-right:2.5vw;
 }
 .people_pic{
     width: 100%;
@@ -108,73 +114,82 @@ a{
     border:1px solid black;
 }
 .people_text_container{
-    width: 950px;
+    width: 83%;
     height: 100%;
     text-align:left;
+    position: relative;
 }
 .people_name{
-    height: 20px;
-    font-size:24px;
+    height: 7%;
+    font-size:1.25vw;
     margin-top: 0px;
     font-weight: bold;
 }
 .people_title{
-    font-size:16px;
-    height: 15px;
+    font-size:0.9vw;
+    height: 5%x;
+    color: gray;
 }
 .people_description{
-    height: 170px;
+    height: 57%;
+    font-size:0.8vw;
 }
-/*疑似无效*/
 .people_link{
-    height: 15px;
+    height: 5%;
+    font-size:0.8vw;
 }
 .people_past{
-    height: 50px;
+    height: 17%;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 1.56vw;
     text-align: left;
 }
 
 /*Publication*/
 .pub_container{
     width: 100%;
-    height: 350px;
+    height: 17.5vw;
     position: relative;
-    margin-bottom:30px; 
+    margin-bottom:2vw; 
     border-bottom: 2px solid #EAEAEA;
-    padding-bottom: 20px;
+    padding-bottom: 1.5vw;
     display: flex;
     overflow:hidden;
 }
 .pub_flag{
-    height: 50px;
+    height: 2.5vw;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 1.5vw;
     text-align: left;
-    margin-bottom: 30px;
+    margin-bottom: 0.5vw;
+    color: rgb(0, 0, 0,0.5);
 }
 .pub_year{
-    height: 50px;
+    height: 2.5vw;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 1.5vw;
     text-align: left;
 }
 .pub_pic{
-    width: 350px;
+    width: 30%;
     height: 100%;
-    margin-right: 50px;
+    margin-right: 5%;
 }
 .pub_text_container{
-    width: 800px;
+    width: 65%;
     height: 100%;
 }
+.pub_text_container_befor{
+    width: 100%;
+    height: 7.5vw;
+    border-bottom: 2px solid #EAEAEA;
+    margin-bottom: 1vw;
+}
 .pub_title{
-    height: 50px;
-    font-size: 20px;
+    font-size: 1vw;
     font-weight: bold;
     margin: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 1vw;
     text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -183,26 +198,23 @@ a{
     -webkit-box-orient: vertical;
 }
 .pub_author_list{
-    height: 35px;
     margin: 0px;
-    margin-bottom: 10px;
-    text-align: left;
-    font-size: 15px;
+    margin-bottom: 1vw;
+    font-size:1vw;
     color: gray;
+    text-align: left;
 }
 .pub_description{
-    height: 190px;
     margin: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 1vw;
     text-align: left;
-    font-size: 20px;
+    font-size: 1vw;
 }
 .pub_journal{
-    height: 35px;
     margin: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 1vw;
     text-align: left;
-    font-size: 20px;
+    font-size: 1vw;
     color: #607ae3;
 }
 
@@ -210,36 +222,26 @@ a{
 
 /*Gallery*/
 .gallery{
-    display: flex;
     width: 100%;
-    flex-wrap: wrap;
-}
-.gallery_container_horizontal{
-    width: 400px;
-    height: 300px;
-    margin: 20px;
     position: relative;
-    overflow:hidden;
-    border-radius: 25%;
-    border:1px solid black;
-    background-color: black;
+    display: flex;
 }
-.gallery_container_vertical{
-    width: 300px;
-    height: 400px;
-    margin: 20px;
+.gallery_list{
+    width: 32%;
     position: relative;
-    overflow:hidden;
-    border-radius: 5%;
+    margin: 0.1vw;
+}
+.gallery_container{
+    width: 100%;
+    margin: 0.2vw;
     border:1px solid black;
-    background-color: black;
+    background-color: white;
 }
 .gallery_sliderpic{
     display: none;
-    height: 100%;
     width: 100%;
     position: relative;
-    object-fit: cover;
+    object-fit: contain;
 }
 .fade {
     animation-name: fade;
@@ -259,59 +261,79 @@ a{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 150px;
-    
+    height: 7.5vw;
     margin-bottom: 10px;
-    
+    background-color: #f2f0f0;
 }
 .blogs_cal{
-    width: 150px;
+    width: 7.5vw;
     height: 100%;
-    margin-right: 10px;
-    border-right: 2px solid #8DC63F;
-    background-color: #f2f0f0
+    border-right: 0.15vw solid gray;
+    padding-left: 1.2vw;
+    padding-right: 1.2vw;
+    margin-right: 1vw;
 }
-.blogs_cal_year{
-    border-bottom: 5px solid #8DC63F;
+.blogs_cal_top{
+    border-bottom: 0.15vw solid #a1231a;
     width: 100%;
     height: 40%;
-
+    margin-top: 1vw;
 }
 .blogs_cal_font1{
-    font-size: 30px;
-    color: #8DC63F;
-    margin: 0px;
-    margin-top: 20px;
+    font-size: 2.5vw;
+    color: #a1231a;
+    margin: 0vw;
+    padding-bottom: 0.5vw
 }
 .blogs_cal_font2{
-    font-size: 30px;
-    color: #8DC63F;
-    margin-top: 20px;
+    font-size: 1.5vw;
+    color: #a1231a;
+    margin: 0vw;
+    margin-top: 0.5vw;
 }
 .blogs_text_container{
-    width: 1038px;
+    width: 52.5vw;
     height: 100%;
-    background-color: #f2f0f0;
-    border-bottom: 2px solid #EAEAEA;
 }
 .blogs_title{
     height: 20%;
     width: 100%;
-    margin: 0px;
-    margin-bottom: 10px;
+    margin-top: 1vw;
+    margin-bottom: 2vw;
     font-weight: bold;
     text-align: left;
-    font-size: 20px;
+    font-size: 1vw;
 }
 .blogs_preview{
     width: 100%;
     height: 80%;
     margin: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 0.5vw;
+    margin-left: 0.5vw;
     text-align: left;
-    font-size: 16px;
+    font-size: 1vw;
+    color: gray;
 }
-
+.blogs_selector{
+    width: 100%;
+    height: 2vw;
+    margin-bottom: 0.5vw;
+    display: flex;
+    overflow: overlay;
+    padding: auto;
+}
+.blogs_buttom{
+    width: 10%;
+    height:100%;
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+    padding-top: 0.5vw;
+    font-size: 0.8vw;
+}
+.blogs_buttom:hover{
+    background-color: red;
+}
 /*时间线*/
 * {
     box-sizing: border-box;
@@ -324,7 +346,7 @@ a{
 /* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
-    max-width: 1200px;
+    max-width: 62.5vw;
     margin: 0 auto;
 }
 
@@ -332,17 +354,17 @@ a{
 .timeline::after {
     content: '';
     position: absolute;
-    width: 6px;
+    width: 0.3125vw;
     background-color: white;
     top: 0;
     bottom: 0;
     left: 50%;
-    margin-left: -3px;
+    margin-left: -0.15625vw;
 }
 
 /* Container around content */
 .container {
-    padding: 10px 40px;
+    padding: 0.5vw 2vw;
     position: relative;
     background-color: inherit;
     width: 50%;
@@ -352,12 +374,12 @@ a{
 .container::after {
     content: '';
     position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
+    width: 1.6vw;
+    height: 1.6vw;
+    right: -1.1vw;
     background-color: white;
-    border: 4px solid #8DC63F;
-    top: 15px;
+    border: 0.3vw solid #8DC63F;
+    top: 1.389vw;
     border-radius: 50%;
     z-index: 1;
 }
@@ -377,12 +399,12 @@ a{
     content: " ";
     height: 0;
     position: absolute;
-    top: 22px;
+    top: 1.2vw;
     width: 0;
     z-index: 1;
-    right: 30px;
+    right: 1.2vw;
     border: medium solid white;
-    border-width: 10px 0 10px 10px;
+    border-width: 0.8vw 0 0.8vw 0.8vw;
     border-color: transparent transparent transparent white;
 }
 
@@ -391,28 +413,37 @@ a{
     content: " ";
     height: 0;
     position: absolute;
-    top: 22px;
+    top: 1.2vw;
     width: 0;
     z-index: 1;
-    left: 30px;
+    left: 1.2vw;
     border: medium solid white;
-    border-width: 10px 10px 10px 0;
+    border-width: 0.8vw 0.8vw 0.8vw 0;
     border-color: transparent white transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
 .right::after {
-    left: -16px;
+    left:-1vw;
 }
 
 /* The actual content */
 .content {
-    padding: 20px 30px;
+    max-height: 15vw;
+    padding: 0.8vw 1.2vw;
     background-color: white;
     position: relative;
-    border-radius: 6px;
+    border-radius: 0.5vw;
 }
-
+.news_head{
+    font-size: 1.2vw;
+    margin: 0;
+    color: #607ae3;
+}
+.news_text{
+    font-size: 1vw;
+    margin: 0;
+}
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
     /* Place the timelime to the left */
